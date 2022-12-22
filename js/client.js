@@ -1306,6 +1306,7 @@ function toId() {
 					if (isTeambuilderFormat) {
 						teambuilderFormatName = name;
 						if (id.slice(0, 3) !== 'gen') {
+							console.log("using gen 6 reeeeeeeeeee");
 							teambuilderFormatName = '[Gen 6] ' + name;
 						}
 						var parenPos = teambuilderFormatName.indexOf('(');

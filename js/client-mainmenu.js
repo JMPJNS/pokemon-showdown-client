@@ -985,6 +985,8 @@
 
 		curFormat: '',
 		renderFormats: function (formatid, noChoice) {
+			if (formatid)
+				formatid = formatid.replace(/\[Gen.*\]/, '');
 			if (!window.BattleFormats) {
 				return '<button class="select formatselect" name="format" disabled value="' + BattleLog.escapeHTML(formatid) + '"><em>Loading...</em></button>';
 			}
@@ -1002,13 +1004,14 @@
 						break;
 					}
 				}
-				formatid = this.curFormat;
 			}
 			return '<button class="select formatselect' + (noChoice ? ' preselected' : '') + '" name="format" value="' + formatid + '"' + (noChoice ? ' disabled' : '') + '>' + BattleLog.escapeFormat(formatid) + '</button>';
 		},
 		curTeamFormat: '',
 		curTeamIndex: 0,
 		renderTeams: function (formatid, teamIndex) {
+			if (formatid)
+				formatid = formatid.replace(/\[Gen.*\]/, '');
 			if (Storage.whenTeamsLoaded.error) {
 				return '<button class="select teamselect" name="joinRoom" value="teambuilder"><em class="message-error">Error loading teams</em></button>';
 			}
@@ -1242,7 +1245,7 @@
 				formatName = formatName.replace('[Gen 8 ', '[');
 				formatName = formatName.replace('[Gen 9] ', '');
 				formatName = formatName.replace('[Gen 7 ', '[');
-				bufs[curBuf] += '<li><button name="selectFormat" value="' + i + '"' + (curFormat === i ? ' class="sel"' : '') + '>' + formatName + '</button></li>';
+				bufs[curBuf] += '<li><button name="selectFormat" value="' + i + '"' + (curFormat === i ? ' class="sel"' : '') + '>' + formatName.replace(/\[Gen.*\]/, '') + '</button></li>';
 			}
 
 			var html = '';

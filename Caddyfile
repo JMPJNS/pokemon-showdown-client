@@ -1,0 +1,5 @@
+pokemmo.trqst.me {
+    root * /root/pokemon-showdown-client
+    encode gzip
+    file_server
+}

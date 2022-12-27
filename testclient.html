@@ -21,18 +21,11 @@
 			}
 			Config.testclient = true;
 			(function() {
-				if (location.search !== '') {
-					var m = /\?~~(([^:\/]*)(:[0-9]*)?)/.exec(location.search);
-					if (m) {
-						Config.server = {
-							id: m[1],
-							host: m[2],
-							port: (m[3] && parseInt(m[3].substr(1))) || 8000
+				Config.server = {
+							id: "89.58.12.195:8000",
+							host: "89.58.12.195",
+							port: 8000
 						};
-					} else {
-						alert('Unrecognised query string syntax: ' + location.search);
-					}
-				}
 			})();
 		</script>
 		<!--[if lte IE 8]><script>

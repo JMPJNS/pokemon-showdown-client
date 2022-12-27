@@ -2880,6 +2880,7 @@ function toId() {
 		},
 		submit: function (data) {
 			this.close();
+			window.localStorage.setItem("sid", data.result);
 			this.callback(data.result);
 		}
 	});

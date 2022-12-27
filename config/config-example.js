@@ -13,16 +13,20 @@ Config.whitelist = [
 
 	// If you would like to change our list, simply message Zarel on Smogon or
 	// Discord.
+	'localhost',
+	'trqst.me',
+	'jmp.blue',
+	'89.58.12.195'
 ];
 
 // `defaultserver` specifies the server to use when the domain name in the
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'showdown',
-	host: 'sim3.psim.us',
-	port: 443,
+	host: '89.58.12.195',
+	port: 8000,
 	httpport: 8000,
-	altport: 80,
+	altport: 8000,
 	registered: true
 };
 

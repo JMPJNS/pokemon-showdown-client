@@ -16,17 +16,18 @@ Config.whitelist = [
 	'localhost',
 	'trqst.me',
 	'jmp.blue',
-	'89.58.12.195'
+	'89.58.12.195',
+	'backend.pokemmo.trqst.me'
 ];
 
 // `defaultserver` specifies the server to use when the domain name in the
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'showdown',
-	host: '89.58.12.195',
-	port: 8000,
-	httpport: 8000,
-	altport: 8000,
+	host: 'backend.pokemmo.trqst.me',
+	port: 443,
+	httpport: 443,
+	altport: 443,
 	registered: true
 };
 

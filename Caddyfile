@@ -1,3 +1,7 @@
+backend.pokemmo.trqst.me {
+    reverse_proxy http://localhost:8000
+}
+
 pokemmo.trqst.me {
     root * /root/pokemon-showdown-client
     encode gzip

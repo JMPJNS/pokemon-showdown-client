@@ -468,7 +468,7 @@ export class BattleLog {
 	}
 
 	static escapeFormat(formatid: string): string {
-		let atIndex = formatid.indexOf('@@@');
+		let atIndex = formatid?.indexOf('@@@');
 		if (atIndex >= 0) {
 			return this.escapeFormat(formatid.slice(0, atIndex)) +
 				'<br />Custom rules: ' + this.escapeHTML(formatid.slice(atIndex + 3));
